@@ -15,6 +15,7 @@ export const Text =styled.div`
 
 width: 804px;
 height: 196px;
+padding-top: 40px;
 
 `
 
@@ -32,14 +33,14 @@ box-shadow: 3px 3px 3px #aaaaaa;
 export const Content =styled.div`
 
 display: flex;
-gap: 50px;
-
+gap: 40px;
+padding-top: 20px;
 
 `
 export const Scontent =styled.div`
 
 display: flex;
-gap: 10px;
+
 `
 export const Stext =styled.div`
 
@@ -53,12 +54,12 @@ export const Scolumn =styled.div`
 
 display: flex;
 flex-direction: column;
-gap: 37px;
+
 `
 
 export const Vline =styled.div`
 border-right: 1px solid #808080;
-height: max;
+height: auto;
 `
 
 export const DemoClass = styled.div`
@@ -91,10 +92,24 @@ export const ThumbNailDiv = styled.div`
     height: 120px;
     border-radius: 10px;
     margin-bottom: 0.8rem;
+
 `
 
 export const DemoClassLink = styled(Link)`
     text-decoration: none;
     color: ${({theme}) => theme.text};
     margin: 25px;
+`
+export const Lcontent = styled.div`
+width:80%;
+height: 100vh;
+padding-left: 40px;
+
+    
+`
+export const Rcontent = styled.div`
+width:100%;
+height: 150vh;
+overflow-y: scroll;
+
 `

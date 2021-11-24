@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
-import { FaBars, FaUser, FaList, FaSearch } from 'react-icons/fa';
-
+import { FaBars, FaUser, FaList} from 'react-icons/fa';
+import Search from '../Search/searchbar';
 
 function Navbar(){
 	const [isOpen, setIsOpen] = useState(false);
@@ -33,10 +33,7 @@ function Navbar(){
 				<NavLink href="">Subscription</NavLink>
 				<NavLink href="">Request</NavLink>
 				<NavLink href="">Help</NavLink>
-				<SearchDiv>
-					<SearchInput placeholder="Search"/>
-					<SearchIcon/>
-				</SearchDiv>
+				<Search/>
 			</Menu>
 		</Nav>
 	);
@@ -49,6 +46,7 @@ const Nav = styled.div`
 	align-items: center;
 	flex-wrap: wrap;
 	border-bottom: 0.2px solid #c0c0c0;
+	
 `;
 
 const LeftSide = styled.div`
@@ -172,37 +170,6 @@ const NILLink = styled.a`
 	font-size: 14px;
 `;
 
-const SearchDiv = styled.div`
-	display: flex;
-	margin: 1rem 1rem;
-	width: 165px;
-	height: 30px;
-	border-radius: 4px;
-	border: 1.5px solid #c0c0c0;
-	background: #ffefff;
-	outline-width: 0px;
-	align-items: center;
-`;
-
-const SearchInput = styled.input`
-	width: 130px;
-	height: 26px;
-	justify-content: space-between;
-	padding-left: 10px;
-	background: #ffefff;
-	outline: none;
-	border: 0.5px solid #ffefff;
-`;
-
-const SearchIcon = styled(FaSearch)`
-	height: px;
-	width: 20px;
-	color: #c0c0c0;
-
-	&:hover{
-		color: gray
-	}
-`;
 
 const Logo = styled.a`
 	padding: 1rem;
